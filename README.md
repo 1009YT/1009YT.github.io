@@ -1,4 +1,4 @@
-# YT' BLOG
+# YT BLOG
 
 > Hello World!
 
