@@ -39,6 +39,7 @@ script:
   # - hexo deploy
 
 after_script:
+  - cd ./public
   - git init
   - git config --global user.name "yuting"
   - git config --global user.email "951958635@qq.com"
