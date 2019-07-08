@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: TY's BLOG
+title: 雨停的博客
 subtitle: to share, to learn
 description: a beginner, a learner
 keywords: blog
-author: 4pmtong
-language: en
+author: 雨停
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://1009YT.github.io
+url: https://1009yt.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,11 +73,31 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+# theme: next
+theme: mynext
+
+# https://theme-next.iissnan.com/third-party-services.html#local-search
+# 本地搜索，在站点根目录安装插件：npm install hexo-generator-searchdb --save
+# npm install hexo-generator-searchdb --save
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# https://github.com/huiwang/hexo-baidu-url-submit
+# npm install hexo-baidu-url-submit --save
+baidu_url_submit:
+  count: 1000 ## 提交最新的一个链接
+  host:  ## 在百度站长平台中注册的域名
+  token:  ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path:  ## 文本文档的地址， 新链接会保存在此文本文档里
+
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:1009YT/1009YT.github.io.git
-  branch: gh-pages
+  branch: master
