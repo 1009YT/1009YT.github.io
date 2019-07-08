@@ -38,7 +38,15 @@ script:
   - hexo generate
   - echo ${ENV_TEST}
   - rm -rf .deploy_git
-  - hexo deploy
+  # - hexo deploy
+
+after_script:
+  - git add .
+  - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Github Pages
+  - git push --force --quiet "https://$Travis_gh_token@${URL_REPO}" master:master
+  # Github Pages
+  - git push --quiet "https://$Travis_gh_token@${URL_REPO}" master:master --tags
 
 # configure notifications (email, IRC, campfire etc)
 # please update this section to your needs!
