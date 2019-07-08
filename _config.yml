@@ -99,5 +99,6 @@ baidu_url_submit:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:1009YT/1009YT.github.io.git
+  # repo: git@github.com:1009YT/1009YT.github.io.git
+  repo: https://git@github.com:1009YT/1009YT.github.io.git
   branch: master
