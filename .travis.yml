@@ -37,6 +37,7 @@ script:
   - hexo clean
   - hexo generate
   - echo ${ENV_TEST}
+  - rm -rf .deploy_git
   - hexo deploy
 
 # configure notifications (email, IRC, campfire etc)
